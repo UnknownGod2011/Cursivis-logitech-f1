@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Cursivis is a cursor-native workflow system designed for Logitech’s device ecosystem, especially **MX Creative Console**, **MX Master 4**, and **Actions Ring**.
+Cursivis is a cursor-native workflow system designed for Logitech's device ecosystem, especially **MX Creative Console**, **MX Master 4**, and **Actions Ring**.
 
 The core product idea is simple:
 
@@ -26,13 +26,13 @@ The goal is to make Logitech hardware feel like an intelligent command layer for
 
 ## Why This Fits Logitech
 
-The project is built specifically around the value of Logitech’s interactive devices:
+The project is built specifically around the value of Logitech's interactive devices:
 
 - **Trigger** for immediate action
 - **Talk** for hold-to-talk refinement
 - **Snip-it** for image and region selection
 - **Action** for executing the result
-- dial / ring interactions for option navigation and control
+- dial and ring interactions for option navigation and control
 
 This is what makes Cursivis feel different from a normal AI app. It is meant to live on top of workflows, not replace them with a chat window.
 
@@ -43,7 +43,7 @@ Cursivis is composed of:
 - a Windows companion app in WPF
 - a Logitech plugin workstream using the Actions SDK
 - a browser execution layer for real current-tab actions
-- a multimodal AI backend
+- a multimodal reasoning backend
 - voice, image, and selection capture flows
 
 The most important part is not just generating text. It is turning the active on-screen context into something actionable through Logitech hardware and UI.
@@ -62,14 +62,13 @@ The hardest parts of the system were:
 
 The product is trying to answer a very specific question:
 
-**What if Logitech’s control surfaces could become an intelligent workflow layer, not just shortcut devices?**
+**What if Logitech's control surfaces could become an intelligent workflow layer, not just shortcut devices?**
 
 That is the direction Cursivis explores.
 
 ## Closing
 
-Cursivis is not positioned as a generic AI demo anymore.  
-It is being refined as a Logitech-native product idea for:
+Cursivis is not positioned as a generic AI demo anymore. It is being refined as a Logitech-native product idea for:
 
 - MX Creative Console
 - MX Master 4

@@ -1,7 +1,7 @@
 {
   "name": "gemini-agent",
   "version": "1.0.0",
-  "description": "Cursivis Gemini backend service",
+  "description": "Cursivis reasoning backend service",
   "type": "module",
   "main": "src/server.js",
   "scripts": {
@@ -10,7 +10,8 @@
     "test": "node --test tests/**/*.test.js"
   },
   "keywords": [
-    "gemini",
+    "llm",
+    "reasoning-backend",
     "express",
     "cursivis"
   ],

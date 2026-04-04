@@ -12,7 +12,7 @@ name: Cursivis
 displayName: Cursivis
 
 # Short description of the plugin.
-description: Cursor-native Gemini workflow control for Logitech MX Creative Console and Actions Ring.
+description: Cursor-native workflow control for Logitech MX Creative Console, MX Master 4, and Actions Ring.
 
 # Name of the plugin library file.
 pluginFileName: CursivisPlugin.dll
@@ -72,7 +72,7 @@ licenseUrl: https://opensource.org/licenses/MIT
 # URL of the support page where the users can send improvement suggestions and report bugs.
 # The URL is shown in Loupedeck Marketplace. The page can be for example a GitHub issues page.
 # NOTE: This setting is recommended when publishing the plugin in Loupedeck Marketplace.
-supportPageUrl: https://github.com/UnknownGod2011/CURSIVIS-1.0/issues
+supportPageUrl: https://github.com/UnknownGod2011/Cursivis-logitech-f1/issues
 
 # URL of the plugin homepage. The URL is shown in Loupedeck Marketplace.
-homePageUrl: https://github.com/UnknownGod2011/CURSIVIS-1.0
+homePageUrl: https://github.com/UnknownGod2011/Cursivis-logitech-f1

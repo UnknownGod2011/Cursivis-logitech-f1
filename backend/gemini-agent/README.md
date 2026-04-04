@@ -1,4 +1,4 @@
-# Cursivis AI Backend
+# Cursivis Reasoning Backend
 
 ## Purpose
 
@@ -53,4 +53,4 @@ Current implementation env:
 - `GEMINI_ROUTER_MODEL`
 - `GEMINI_OPTIONS_MODEL`
 
-Even though the current backend uses Gemini today, the docs and product framing should be understood as **Cursivis-first and Logitech-first**.
+Even though the current repository includes a provider-specific implementation today, the product framing should be understood as **Cursivis-first and Logitech-first**.

@@ -1,14 +1,15 @@
 # Cursivis Logitech Control Map
 
-This file captures the intended default Logitech UX before MX hardware arrives.
-It gives us a stable design target for virtual validation now and hardware tuning later.
+This file captures the intended Logitech UX for Cursivis across MX Creative Console, MX Master 4, and Actions Ring.
+
+It should be read as the product interaction model, not just a shortcut map.
 
 ## Design goals
 
-- Keep the primary interaction extremely fast: select -> trigger -> review -> act
-- Make the dial feel like an AI intent selector, not a generic volume knob
-- Keep mouse-side Actions Ring controls focused on high-frequency actions
-- Use haptics to confirm mode changes and execution state
+- keep the primary interaction extremely fast: select -> trigger -> review -> act
+- make Logitech hardware feel like an intent layer, not a macro layer
+- keep the mouse-side interaction clean and low-friction
+- use haptics to confirm state changes instead of adding visual clutter
 
 ## MX Creative Console default layout
 
@@ -17,55 +18,85 @@ It gives us a stable design target for virtual validation now and hardware tunin
 Suggested default assignments:
 
 1. `Cursivis Trigger`
-   - Runs Smart Mode on the current selection
+   - runs Smart Mode on the current selection
 2. `Hold to Talk`
-   - Starts voice capture for contextual commands
+   - starts voice capture for contextual commands
 3. `Image Selection`
-   - Starts lasso image capture
+   - starts lasso image capture
 4. `Take Action`
-   - Executes the current browser/UI action
+   - executes the current browser or UI action
 5. `More Options`
-   - Re-runs the latest selection through the improved action menu
+   - re-runs the latest selection through the improved action menu
 6. `Undo`
-   - Reverts the last replace/browser action when possible
+   - reverts the last replace or browser action when possible
 7. `Copy`
-   - Copies the current Cursivis result
+   - copies the current Cursivis result
 8. `Insert`
-   - Inserts/replaces with the current result
+   - inserts or replaces with the current result
 
 ### Dialpad
 
 Suggested default assignments:
 
 - `Rotate`
-  - Moves the Cursivis action ring selection
+  - moves the Cursivis action selection
 - `Press`
-  - Executes the currently highlighted action
+  - executes the currently highlighted action
 - `Hold`
-  - Optional advanced mode: voice-first execution
+  - optional advanced mode for voice-first execution
 
-## Actions Ring default layout
+## MX Master 4 reference layout
 
-The Actions Ring should prioritize the four fastest “anywhere” actions:
+Suggested mouse-side setup:
+
+1. map a programmable hardware button as the instant Cursivis trigger
+2. use the gesture-button profile or another custom button assignment in Logi Options+
+3. keep Actions Ring as the nested secondary command layer
+4. use thumb wheel or wheel input to navigate Guided mode without moving pointer focus
+
+This gives the mouse two clear roles:
+
+- one-press primary trigger
+- anywhere secondary action surface
+
+## Actions Ring reference layout
+
+Recommended top-level behavior:
+
+1. create one primary bubble named `Cursivis`
+2. place the core actions inside that bubble
+
+Recommended nested bubbles:
 
 1. `Trigger`
-2. `Take Action`
-3. `Hold to Talk`
+2. `Hold to Talk`
+3. `Take Action`
 4. `Image Selection`
+5. `Settings`
 
-Secondary ring candidates:
+This keeps the main ring visually clean while still exposing the full Cursivis system anywhere.
+
+Secondary ring candidates outside the Cursivis folder:
 
 1. `More Options`
 2. `Undo`
 3. `Copy`
 4. `Insert`
 
+## Guided mode navigation
+
+Guided mode works especially well with Logitech hardware:
+
+- dial rotation can move through options on MX Creative Console
+- thumb wheel or wheel input can move through options on MX Master 4
+- pausing on an option can auto-confirm it for a low-friction flow
+
 ## Haptic intent
 
 Current event semantics already wired through the plugin:
 
 - `action_change`
-  - light confirmation when the dial changes the selected AI action
+  - light confirmation when the selected AI action changes
 - `action_execute`
   - medium confirmation when a trigger is executed
 - `processing_start`
@@ -94,7 +125,7 @@ What still requires real devices:
 When MX hardware arrives:
 
 1. test keypad trigger latency
-2. test dial tick sensitivity and action-ring clarity
+2. test dial tick sensitivity and action clarity
 3. test hold-to-talk comfort and cancellation behavior
 4. test Actions Ring discoverability on the MX mouse
 5. tune default layout based on real-hand usage, not assumptions

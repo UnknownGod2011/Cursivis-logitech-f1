@@ -2,11 +2,11 @@
 
 Primary diagram asset:
 
-- `ARCHITECTURE_DIAGRAM_CHATGPT.png`
-
-Alternate vector version:
-
 - `ARCHITECTURE_DIAGRAM.svg`
+
+Preview image:
+
+- `ARCHITECTURE_DIAGRAM_PREVIEW.png`
 
 The diagram is now meant to communicate the Logitech product story clearly:
 

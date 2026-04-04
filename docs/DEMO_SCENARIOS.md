@@ -12,6 +12,13 @@ Success criteria:
 - the action matches the selected context
 - the result feels useful without manual prompting
 
+Example selections:
+
+- French paragraph -> translation
+- article -> summary
+- source code -> explanation
+- broken code -> debugging guidance
+
 ## Scenario 2: Guided Orb Actions
 
 1. User selects text
@@ -43,6 +50,12 @@ Success criteria:
 3. Cursivis generates the useful result
 4. User presses `Take Action`
 5. The browser task is executed in the current workflow
+
+Example outcomes:
+
+- MCQs auto-filled
+- email reply drafted in the compose surface
+- form fields completed in the live browser tab
 
 ## Scenario 6: Logitech Hardware Story
 

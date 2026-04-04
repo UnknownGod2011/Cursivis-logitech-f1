@@ -98,6 +98,13 @@ The current hardware-ready control design is documented in:
 
 This gives us a stable target for MX Creative Console and Actions Ring behavior before the real devices arrive.
 
+Current reference interaction goals:
+
+- one programmable MX Master 4 button as the instant Cursivis trigger
+- one nested Actions Ring folder for `Trigger`, `Talk`, `Take Action`, `Snip-it`, and `Settings`
+- thumb wheel or wheel-driven navigation for Guided mode
+- haptic confirmation for selection changes and execution state
+
 ## Bridge Run
 
 ```powershell
