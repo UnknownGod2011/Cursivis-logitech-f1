@@ -1,5 +1,19 @@
 # Cursivis
 
+### What if your cursor could understand intent?
+
+One of the biggest frictions in modern AI workflows is not intelligence. It is interruption.
+
+You select something important, switch tabs, open a chatbot, paste the content, explain what it is, describe what you want, wait for the answer, then manually carry that answer back into the real workflow.
+
+That is slow. It breaks focus. And it makes AI feel like a second app instead of a natural part of work.
+
+Cursivis was built to remove that friction.
+
+Instead of asking the user to leave their workflow, Cursivis brings the power of AI to the click of the cursor. You select what matters, press a trigger on Logitech hardware, and Cursivis understands the context, chooses or offers the best action, and can even execute the next step for you.
+
+It feels less like prompting and more like intent being understood.
+
 Cursor-native workflow intelligence for Logitech MX Master 4, MX Creative Console, and Actions Ring.
 
 Cursivis turns what you are already pointing at into something useful:
