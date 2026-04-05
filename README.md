@@ -27,6 +27,24 @@ This project is built around one core idea:
 
 > **Selection = Context. Trigger = Intent. Cursivis = Action.**
 
+## Workflow At A Glance
+
+```mermaid
+flowchart LR
+    A["Select live context<br/>text, code, image, form, email"] --> B["Trigger from Logitech hardware"]
+    B --> B1["MX Master button"]
+    B --> B2["Actions Ring"]
+    B --> B3["MX Creative Console"]
+    B1 --> C["Cursivis captures context"]
+    B2 --> C
+    B3 --> C
+    C --> D["Smart Mode or Guided Mode"]
+    D --> E["Result appears in the AI box"]
+    E --> F["Insert / More Options / Talk"]
+    E --> G["Take Action"]
+    G --> H["Execute in the live browser workflow"]
+```
+
 ## Why Cursivis Feels Different
 
 Most AI tools begin with a blank box.
@@ -95,6 +113,45 @@ The same interaction model extends naturally to MX Creative Console:
 - guided action navigation
 - direct `Take Action`
 - fast access to voice, image selection, and follow-up commands
+
+## System Architecture
+
+```mermaid
+flowchart TB
+    A["Logitech Hardware<br/>MX Master 4 / MX Creative Console / Actions Ring"] --> B["Logitech Plugin Layer<br/>C# + Logi Actions SDK"]
+    B --> C["Shared IPC Protocol"]
+    C --> D["Cursivis Companion<br/>C# + WPF"]
+    D --> D1["Selection capture"]
+    D --> D2["Orb + AI box UI"]
+    D --> D3["Smart / Guided / Talk / Snip-it / Take Action"]
+    D --> E["Reasoning Backend<br/>Node.js"]
+    E --> E1["Context understanding"]
+    E --> E2["Action routing"]
+    E --> E3["Structured browser plans"]
+    D --> F["Browser Action Layer"]
+    F --> F1["Chromium extension"]
+    F --> F2["Browser action agent"]
+    F --> F3["Native host / fallback execution"]
+    E --> F
+    F --> G["Real browser tab and live workflow"]
+    B --> H["Haptics + hardware feedback"]
+    D --> H
+```
+
+### Repository Map
+
+- `desktop/cursivis-companion`
+  - Windows companion app, orb, AI box, selection capture, guided flow, voice flow, result handling
+- `plugin/logitech-plugin`
+  - Logitech plugin, Actions Ring integration, trigger bridge, haptics
+- `backend/gemini-agent`
+  - reasoning layer and browser action planning
+- `desktop/browser-extension-chromium`
+  - current-tab browser execution
+- `desktop/browser-action-agent`
+  - browser automation and execution fallback
+- `shared/ipc-protocol`
+  - contracts for triggers, responses, plans, and runtime coordination
 
 ## What Cursivis Can Do
 
@@ -205,20 +262,9 @@ It demonstrates a stronger product idea:
 
 That combination is what makes the project distinctive.
 
-## System Overview
+## Runtime Notes
 
-The repository is split into four main layers:
-
-- `desktop/cursivis-companion`
-  - Windows companion app, orb, AI box, selection capture, guided flow, voice flow, result handling
-- `backend/gemini-agent`
-  - reasoning backend and browser action planning layer
-- `desktop/browser-extension-chromium` and `desktop/browser-action-agent`
-  - live browser context + execution layer
-- `plugin/logitech-plugin`
-  - Logitech plugin, Actions Ring integration, haptics, and local trigger bridge
-
-Important note:
+Important notes:
 
 - the product is **not** tied conceptually to one model vendor
 - the current repository ships with a default provider-backed reasoning implementation under `backend/gemini-agent`

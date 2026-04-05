@@ -18,6 +18,48 @@ This means:
 - the trigger communicates what kind of interaction they want
 - Cursivis decides, guides, or executes the next step
 
+## Workflow Diagram
+
+```mermaid
+flowchart LR
+    A["Select live context<br/>text, code, image, form, email"] --> B["Trigger from Logitech hardware"]
+    B --> B1["MX Master button"]
+    B --> B2["Actions Ring"]
+    B --> B3["MX Creative Console"]
+    B1 --> C["Cursivis captures context"]
+    B2 --> C
+    B3 --> C
+    C --> D["Smart Mode or Guided Mode"]
+    D --> E["Result appears in the AI box"]
+    E --> F["Insert / More Options / Talk"]
+    E --> G["Take Action"]
+    G --> H["Execute in the live browser workflow"]
+```
+
+## Architecture Diagram
+
+```mermaid
+flowchart TB
+    A["Logitech Hardware<br/>MX Master 4 / MX Creative Console / Actions Ring"] --> B["Logitech Plugin Layer<br/>C# + Logi Actions SDK"]
+    B --> C["Shared IPC Protocol"]
+    C --> D["Cursivis Companion<br/>C# + WPF"]
+    D --> D1["Selection capture"]
+    D --> D2["Orb + AI box UI"]
+    D --> D3["Smart / Guided / Talk / Snip-it / Take Action"]
+    D --> E["Reasoning Backend<br/>Node.js"]
+    E --> E1["Context understanding"]
+    E --> E2["Action routing"]
+    E --> E3["Structured browser plans"]
+    D --> F["Browser Action Layer"]
+    F --> F1["Chromium extension"]
+    F --> F2["Browser action agent"]
+    F --> F3["Native host / fallback execution"]
+    E --> F
+    F --> G["Real browser tab and live workflow"]
+    B --> H["Haptics + hardware feedback"]
+    D --> H
+```
+
 ## System Components
 
 ### Logitech Plugin (`plugin/logitech-plugin`)
