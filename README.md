@@ -42,7 +42,7 @@ That changes the interaction model completely:
 
 Instead, Cursivis sits on top of the workflow and turns Logitech hardware into an intelligent intent layer.
 
-## What Makes It Competition-Strong
+## What Makes It Unique! 
 
 In one system, Cursivis combines:
 
@@ -401,7 +401,7 @@ If you are using an IDE with an AI coding assistant, you can paste this prompt t
 Open this repository and start the full local Cursivis stack. Use scripts/run-demo.ps1 with the Logitech bridge enabled, keep the companion in background mode, and verify that the backend, browser action agent, extension bridge, and hotkey host are healthy. Then guide me through loading the Chromium extension, building/installing the Logitech plugin, setting up the Cursivis Actions Ring folder, and confirming that Trigger, Talk, Snip-it, and Take Action all work.
 ```
 
-## Repository Guide For Judges
+## Repository Guide:
 
 If you want to review the project quickly, start here:
 
@@ -427,4 +427,4 @@ This repo already includes:
 - haptic signaling
 - take-action browser planning and execution
 
-Cursivis is being refined as a premium Logitech-native productivity system, not as a generic AI demo.
+Cursivis is being refined as a premium Logitech-native productivity system.
