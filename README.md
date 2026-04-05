@@ -42,7 +42,7 @@ That changes the interaction model completely:
 
 Instead, Cursivis sits on top of the workflow and turns Logitech hardware into an intelligent intent layer.
 
-## What Makes It Unique! 
+## What Makes Cursivis Unique
 
 In one system, Cursivis combines:
 
@@ -121,9 +121,9 @@ The same interaction model extends naturally to MX Creative Console:
 
 - Use `Snip-it` to capture a region on screen.
 - Describe what is in an image.
-- extract text with OCR
-- identify objects or interface elements
-- combine text selection plus image context when both matter
+- Extract text with OCR.
+- Identify objects or interface elements.
+- Combine text selection plus image context when both matter.
 
 ## The Interaction Loop
 
@@ -192,7 +192,7 @@ After Cursivis generates the right answer, it can execute the next step in the l
 
 It prefers acting in the real logged-in tab through the Chromium extension path, then falls back to other supported browser execution paths when needed.
 
-## Why This Matters In Competition
+## Why Cursivis Stands Out
 
 Cursivis is not just "AI with Logitech controls."
 
@@ -401,7 +401,7 @@ If you are using an IDE with an AI coding assistant, you can paste this prompt t
 Open this repository and start the full local Cursivis stack. Use scripts/run-demo.ps1 with the Logitech bridge enabled, keep the companion in background mode, and verify that the backend, browser action agent, extension bridge, and hotkey host are healthy. Then guide me through loading the Chromium extension, building/installing the Logitech plugin, setting up the Cursivis Actions Ring folder, and confirming that Trigger, Talk, Snip-it, and Take Action all work.
 ```
 
-## Repository Guide:
+## Repository Guide For Judges
 
 If you want to review the project quickly, start here:
 
@@ -427,4 +427,4 @@ This repo already includes:
 - haptic signaling
 - take-action browser planning and execution
 
-Cursivis is being refined as a premium Logitech-native productivity system.
+Cursivis is a premium Logitech-native productivity system built to make AI feel immediate, contextual, and actionable.
